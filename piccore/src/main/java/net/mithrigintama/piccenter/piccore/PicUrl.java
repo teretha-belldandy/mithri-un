@@ -2,6 +2,14 @@ package net.mithrigintama.piccenter.piccore;
 
 public class PicUrl {
 
+	public String getPid() {
+		return pid;
+	}
+
+	public void setPid(String pid) {
+		this.pid = pid;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -47,6 +55,8 @@ public class PicUrl {
 	public int hashCode() {
 		return name.hashCode() + purl.hashCode();
 	}
+
+	private String pid;
 
 	private String name;
 
