@@ -1,9 +1,9 @@
 package net.mithrigintama.piccenter.picdb.impl;
 
 import net.mithrigintama.piccenter.piccore.PicUrl;
-import net.mithrigintama.piccenter.picdb.PicUrlDao;
+import net.mithrigintama.piccenter.picdb.PicInfoDao;
 
-public class PicUrlDaoImpl implements PicUrlDao {
+public class PicUrlDaoImpl implements PicInfoDao {
 
 	public PicUrl findPicUrlById(String id) {
 		// TODO Auto-generated method stub
