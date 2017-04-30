@@ -4,10 +4,10 @@ import net.mithrigintama.piccenter.picpojo.PicInfo;
 
 public interface PicInfoDao {
 
-	PicInfo findPicUrlById(String picId);
+	PicInfo findPicInfoById(String picId);
 
-	boolean addPicUrl(PicInfo picInfo);
+	boolean addPicInfo(PicInfo picInfo);
 
-	boolean rmPicUrlById(String picId);
+	boolean rmPicInfoById(String picId);
 
 }

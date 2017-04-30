@@ -1,21 +1,21 @@
 package net.mithrigintama.piccenter.picdb.impl;
 
-import net.mithrigintama.piccenter.piccore.PicUrl;
 import net.mithrigintama.piccenter.picdb.PicInfoDao;
+import net.mithrigintama.piccenter.picpojo.PicInfo;
 
-public class PicUrlDaoImpl implements PicInfoDao {
+public class PicInfoDaoImpl implements PicInfoDao {
 
-	public PicUrl findPicUrlById(String id) {
+	public PicInfo findPicInfoById(String picId) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public boolean addPicUrl(PicUrl picUrl) {
+	public boolean addPicInfo(PicInfo picInfo) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	public boolean rmPicUrlById(String id) {
+	public boolean rmPicInfoById(String picId) {
 		// TODO Auto-generated method stub
 		return false;
 	}
