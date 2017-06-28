@@ -34,5 +34,6 @@
 	<modules>
 		<module>picore</module>
 		<module>picweb</module>
+		<module>picdb</module>
 	</modules>
 </project>
