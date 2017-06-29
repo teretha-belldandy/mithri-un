@@ -4,34 +4,45 @@
   "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-	<classPathEntry location="/Program Files/IBM/SQLLIB/java/db2java.zip" />
+	<classPathEntry location="E:\programTools\apache\apache-maven-3.5.0\localRepository\mysql\mysql-connector-java\5.1.25\mysql-connector-java-5.1.25.jar" />
 
-	<context id="DB2Tables" targetRuntime="MyBatis3">
-		<jdbcConnection driverClass="COM.ibm.db2.jdbc.app.DB2Driver"
-			connectionURL="jdbc:db2:TEST" userId="db2admin" password="db2admin">
+	<context id="mybatis" targetRuntime="MyBatis3"
+		defaultModelType="flat">
+
+		<property name="beginningDelimiter" value="`" />
+		<property name="endingDelimiter" value="`" />
+		<property name="javaFileEncoding" value="UTF-8" />
+
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="false" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/picenterdb" userId="root" password="123456">
 		</jdbcConnection>
 
 		<javaTypeResolver>
 			<property name="forceBigDecimals" value="false" />
 		</javaTypeResolver>
 
-		<javaModelGenerator targetPackage="test.model"
-			targetProject="\MBGTestProject\src">
-			<property name="enableSubPackages" value="true" />
+		<javaModelGenerator targetPackage="com.picenter.picdb.model"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="false" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 
-		<sqlMapGenerator targetPackage="test.xml"
-			targetProject="\MBGTestProject\src">
-			<property name="enableSubPackages" value="true" />
+		<sqlMapGenerator targetPackage="sqlmapper"
+			targetProject="src/main/resources">
+			<property name="enableSubPackages" value="false" />
 		</sqlMapGenerator>
 
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="test.dao" targetProject="\MBGTestProject\src">
-			<property name="enableSubPackages" value="true" />
+			targetPackage="com.picenter.picdb.dao" targetProject="src/main/java">
+			<property name="enableSubPackages" value="false" />
 		</javaClientGenerator>
 
-		<table schema="DB2ADMIN" tableName="ALLTYPES" domainObjectName="Customer">
+		<table schema="picenterdb" tableName="picuser">
 			<property name="useActualColumnNames" value="true" />
 			<generatedKey column="ID" sqlStatement="DB2" identity="true" />
 			<columnOverride column="DATE_FIELD" property="startDate" />
