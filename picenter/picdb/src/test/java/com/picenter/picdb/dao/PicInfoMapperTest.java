@@ -97,7 +97,13 @@ public class PicInfoMapperTest {
 		SqlSession session = factory.openSession();
 		try {
 			PicInfoMapper picinfoMapper = session.getMapper(PicInfoMapper.class);
-			int res = picinfoMapper.updatePicInfo(createPicInfo());
+			PicInfo picinfo = new PicInfo();
+			picinfo.setPid(13177);
+			picinfo.setPname("amanda");
+			picinfo.setPdesc("ons");
+			picinfo.setPsize(9.99);
+			picinfo.setPpath("path way");
+			int res = picinfoMapper.updatePicInfo(picinfo);
 			Assert.assertTrue(1 == res);
 			session.commit(true);
 		} finally {
@@ -107,7 +113,16 @@ public class PicInfoMapperTest {
 
 	@Test
 	public void testQueryPicInfoById() {
-		fail("Not yet implemented");
+		SqlSession session = factory.openSession();
+		try {
+			PicInfoMapper picinfoMapper = session.getMapper(PicInfoMapper.class);
+			PicInfo res = picinfoMapper.queryPicInfoById(13177);
+			Assert.assertTrue(null != res);
+			System.out.println(res);
+			// session.commit(true);
+		} finally {
+			session.close();
+		}
 	}
 
 }

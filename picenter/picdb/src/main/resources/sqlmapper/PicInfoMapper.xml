@@ -20,5 +20,13 @@
 	<delete id="delPicInfo" parameterType="int">
 		delete from picinfo where pid=#{id}
 	</delete>
+	
+	<update id="updatePicInfo" parameterType="com.picenter.picdb.model.PicInfo">
+		update picinfo set pname=#{pname}, pdesc=#{pdesc}, psize=#{psize}, ppath=#{ppath} where pid=#{pid}
+	</update>
+	
+	<select id="queryPicInfoById" parameterType="int" resultType="com.picenter.picdb.model.PicInfo">
+		select * from picinfo where pid=#{id}
+	</select>
 
 </mapper>
