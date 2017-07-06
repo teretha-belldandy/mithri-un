@@ -81,12 +81,28 @@ public class PicInfoMapperTest {
 
 	@Test
 	public void testDelPicInfo() {
-		fail("Not yet implemented");
+		SqlSession session = factory.openSession();
+		try {
+			PicInfoMapper picinfoMapper = session.getMapper(PicInfoMapper.class);
+			int res = picinfoMapper.delPicInfo(2);
+			Assert.assertTrue(1 == res);
+			session.commit(true);
+		} finally {
+			session.close();
+		}
 	}
 
 	@Test
 	public void testUpdatePicInfo() {
-		fail("Not yet implemented");
+		SqlSession session = factory.openSession();
+		try {
+			PicInfoMapper picinfoMapper = session.getMapper(PicInfoMapper.class);
+			int res = picinfoMapper.updatePicInfo(createPicInfo());
+			Assert.assertTrue(1 == res);
+			session.commit(true);
+		} finally {
+			session.close();
+		}
 	}
 
 	@Test
