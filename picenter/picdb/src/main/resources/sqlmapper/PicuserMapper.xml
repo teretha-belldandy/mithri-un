@@ -10,7 +10,7 @@
 		<result column="vip" property="vip" />
 	</resultMap>
 
-	<select id="select" parameterType="int" resultMap="usermap">
+	<select id="queryUserById" parameterType="int" resultMap="usermap">
 	<![CDATA[ 
 		select * from picuser where uid = #{id}
 		]]>

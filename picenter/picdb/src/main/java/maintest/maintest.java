@@ -30,7 +30,7 @@ public class maintest {
 		SqlSession session = factory.openSession();
 		try {
 			PicuserMapper picuserMapper = session.getMapper(PicuserMapper.class);
-			Picuser user = picuserMapper.select(1);
+			Picuser user = picuserMapper.queryUserById(1);
 			System.out.println(user.getUname());
 		} finally {
 			session.close();
