@@ -11,7 +11,9 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import com.picenter.picdb.dao.PicInfoMapper;
 import com.picenter.picdb.dao.PicuserMapper;
+import com.picenter.picdb.model.PicInfo;
 import com.picenter.picdb.model.Picuser;
 
 public class maintest {
@@ -29,9 +31,17 @@ public class maintest {
 		System.out.println(env.getId());
 		SqlSession session = factory.openSession();
 		try {
-			PicuserMapper picuserMapper = session.getMapper(PicuserMapper.class);
-			Picuser user = picuserMapper.queryUserById(1);
-			System.out.println(user.getUname());
+			PicInfoMapper picinfoMapper = session.getMapper(PicInfoMapper.class);
+			PicInfo picinfo = new PicInfo();
+			picinfo.setPid(2);
+			picinfo.setPname("may");
+			picinfo.setPdesc("ons");
+			picinfo.setPsize(9.99);
+			picinfo.setPpath("path way");
+			int res = picinfoMapper.addPicInfo(picinfo);
+			System.out.println(res);
+			session.commit(true);
+			
 		} finally {
 			session.close();
 		}
