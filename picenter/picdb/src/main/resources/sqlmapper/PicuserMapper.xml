@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.apache.ibatis.submitted.rounding.Mapper">
+<mapper namespace="com.picenter.picdb.dao.PicuserMapper">
 
 	<resultMap type="com.picenter.picdb.model.Picuser" id="usermap">
 		<id column="uid" property="uid" />
@@ -10,8 +10,10 @@
 		<result column="vip" property="vip" />
 	</resultMap>
 
-	<select id="queryUserById" parameterType="int" resultMap="usermap">
+	<select id="select" parameterType="int" resultMap="usermap">
+	<![CDATA[ 
 		select * from picuser where uid = #{id}
+		]]>
 	</select>
 	<insert id="insert">
 		insert into users (uid, uname, age, gender, vip)

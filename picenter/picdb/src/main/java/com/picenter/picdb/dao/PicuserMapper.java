@@ -4,5 +4,5 @@ import com.picenter.picdb.model.Picuser;
 
 public interface PicuserMapper {
 	
-	Picuser queryUserById(Integer id);
+	Picuser select(int id);
 }
