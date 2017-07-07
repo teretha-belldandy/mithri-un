@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.util.List;
 import java.util.Random;
 
 import org.apache.ibatis.mapping.Environment;
@@ -119,6 +120,21 @@ public class PicInfoMapperTest {
 			PicInfo res = picinfoMapper.queryPicInfoById(13177);
 			Assert.assertTrue(null != res);
 			System.out.println(res);
+			// session.commit(true);
+		} finally {
+			session.close();
+		}
+	}
+	
+	@Test
+	public void testQueryAllPicInfo() {
+		SqlSession session = factory.openSession();
+		try {
+			PicInfoMapper picinfoMapper = session.getMapper(PicInfoMapper.class);
+			List<PicInfo> resList = picinfoMapper.queryAllPicInfo();
+			Assert.assertTrue(null != resList);
+			Assert.assertTrue(resList.size() > 0);
+			System.out.println(resList);
 			// session.commit(true);
 		} finally {
 			session.close();

@@ -1,5 +1,7 @@
 package com.picenter.picdb.dao;
 
+import java.util.List;
+
 import com.picenter.picdb.model.PicInfo;
 
 public interface PicInfoMapper {
@@ -11,5 +13,7 @@ public interface PicInfoMapper {
 	int updatePicInfo(PicInfo picinfo);
 
 	PicInfo queryPicInfoById(int id);
+	
+	List<PicInfo> queryAllPicInfo();
 
 }

@@ -28,5 +28,9 @@
 	<select id="queryPicInfoById" parameterType="int" resultType="com.picenter.picdb.model.PicInfo">
 		select * from picinfo where pid=#{id}
 	</select>
+	
+	<select id="queryAllPicInfo" resultType="com.picenter.picdb.model.PicInfo">
+		select * from picinfo;
+	</select>
 
 </mapper>
