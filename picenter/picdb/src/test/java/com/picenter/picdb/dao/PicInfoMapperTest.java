@@ -22,10 +22,8 @@ import org.junit.Assert;
 
 import com.picenter.picdb.model.PicInfo;
 
-
-
 public class PicInfoMapperTest {
-	
+
 	static SqlSessionFactory factory;
 
 	@BeforeClass
@@ -67,7 +65,7 @@ public class PicInfoMapperTest {
 			session.close();
 		}
 	}
-	
+
 	private PicInfo createPicInfo() {
 		PicInfo picinfo = new PicInfo();
 		Random rand = new Random();
@@ -76,7 +74,7 @@ public class PicInfoMapperTest {
 		picinfo.setPdesc("ons");
 		picinfo.setPsize(9.99);
 		picinfo.setPpath("path way");
-		
+
 		return picinfo;
 	}
 
@@ -117,7 +115,15 @@ public class PicInfoMapperTest {
 		SqlSession session = factory.openSession();
 		try {
 			PicInfoMapper picinfoMapper = session.getMapper(PicInfoMapper.class);
+			long t = System.currentTimeMillis();
 			PicInfo res = picinfoMapper.queryPicInfoById(13177);
+			System.out.println("time : " + (System.currentTimeMillis() - t));
+
+			PicInfoMapper picinfoMapper1 = session.getMapper(PicInfoMapper.class);
+			long t1 = System.currentTimeMillis();
+			PicInfo res1 = picinfoMapper1.queryPicInfoById(13177);
+			System.out.println("time : " + (System.currentTimeMillis() - t1));
+
 			Assert.assertTrue(null != res);
 			System.out.println(res);
 			// session.commit(true);
@@ -125,13 +131,15 @@ public class PicInfoMapperTest {
 			session.close();
 		}
 	}
-	
+
 	@Test
 	public void testQueryAllPicInfo() {
 		SqlSession session = factory.openSession();
 		try {
 			PicInfoMapper picinfoMapper = session.getMapper(PicInfoMapper.class);
+			long t1 = System.currentTimeMillis();
 			List<PicInfo> resList = picinfoMapper.queryAllPicInfo();
+			System.out.println("time : " + (System.currentTimeMillis() - t1));
 			Assert.assertTrue(null != resList);
 			Assert.assertTrue(resList.size() > 0);
 			System.out.println(resList);
