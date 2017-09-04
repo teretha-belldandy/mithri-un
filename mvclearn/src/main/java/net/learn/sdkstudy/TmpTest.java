@@ -16,7 +16,7 @@ public class TmpTest {
 	public static void main(String[] args) {
 		TestLayout layout = new TestLayout();
 		layout.setPatternsProperty("id|name|customerName|memberName|bankAccountName|platformUserName|bankcardHolder|firstContactName|secondContactName|repayAccountName-1-0,password-0-0,phone|mobilePhone|bindPhone|bankcardPhone|contactNumber|firstContactPhone|secondContactPhone-3-4,certificateNumber|cashOutAccountNo|bankcardNumber|bankAccountNo|repayAccountNo-6-4");
-		String testStr = "fetch data from LoanContract -- {\"annualRate\":0.010000,\\\"bankAccountName\\\":\\\"dog188\\\",\"bankAccountNo\":\"6214850212331638\",\"firstContactName\":\"招商银行\",\"bidFeeRate\":0.000000,\"bizLoanApplySerialNo\":\"2017082800000001\",\"bizLoanSerialNo\":\"2017082800000001\",\"cashOutAccountNo\":\"6214850212331638\",\"cashOutDay\":1,\"certificateNumber\":\"110111199001013753\",\"certificateType\":0,\"createBy\":\"101\",\"createTime\":1503883996000,\"dayAnnualRate\":0.000028,\"id\":1129,\"loanAmount\":30000.000000,\"loanApplicationNo\":\"17082809281394100003\",\"loanContractNo\":\"20170828000000700004\",\"memberName\":\"dog188\",\"memberNo\":\"e405eed5f9df4d9c9120dac26927d529\",\"misusePenaltyScale\":1.000000,\"mobilePhone\":\"11100008188\",\"modifyBy\":\"101\",\"modifyTime\":1503883996000,\"monthFeeRate\":0.020000,\"overDuePenaltyScale\":1.000000,\"payFrequencyType\":\"1\",\"penaltyRate\":0.020000,\"platformUserName\":\"110111199001013753\",\"prepayPenaltyRate\":0.005000,\"productId\":7,\"productType\":0,\"purposeType\":\"TRAVEL\",\"repaymentType\":\"RPT-01\",\"residentialAddress\":\"舅舅家\",\"signFinishTime\":1503916099000,\"specificId\":\"PTYG00018\",\"termmonth\":24,\"yearDays\":360}";
+		String testStr = "fetch data from LoanContract -- {\"platformUserName\":\"liudehua\",\"certificateNumber\":\"123456111117890\",\"annualRate\":0.010000,\\\"bankAccountName\\\":\\\"dog188\\\",\"bankAccountNo\":\"6214850212331638\",\"firstContactName\":\"招商银行\",\"bidFeeRate\":0.000000,\"firstContactPhone\":\"2017082800000001\",\"bizLoanSerialNo\":\"2017082800000001\",\"cashOutAccountNo\":\"6214850212331638\",\"cashOutDay\":1,\"certificateNumber\":\"110111199001013753\",\"certificateType\":0,\"createBy\":\"101\",\"firstContactPhone\":1503883996000,\"dayAnnualRate\":0.000028,\"id\":1129,\"loanAmount\":30000.000000,\"loanApplicationNo\":\"17082809281394100003\",\"loanContractNo\":\"20170828000000700004\",\"memberName\":\"dog188\",\"memberNo\":\"e405eed5f9df4d9c9120dac26927d529\",\"misusePenaltyScale\":1.000000,\"mobilePhone\":\"11100008188\",\"modifyBy\":\"101\",\"modifyTime\":1503883996000,\"monthFeeRate\":0.020000,\"overDuePenaltyScale\":1.000000,\"payFrequencyType\":\"1\",\"penaltyRate\":0.020000,\"platformUserName\":\"110111199001013753\",\"prepayPenaltyRate\":0.005000,\"productId\":7,\"productType\":0,\"purposeType\":\"TRAVEL\",\"repaymentType\":\"RPT-01\",\"residentialAddress\":\"舅舅家\",\"signFinishTime\":1503916099000,\"specificId\":\"PTYG00018\",\"termmonth\":24,\"yearDays\":360}";
 		System.out.println(layout.doLayout(testStr));
 	}
 
@@ -67,8 +67,7 @@ class TestLayout {
 					while (matcher.find()) {
 						int group = 3;
 						if (group <= matcher.groupCount() && matcher.group(group) != null) {
-							for (int i = matcher.start(group) + locations.get(0); (0 == locations.get(1)
-									&& i < matcher.end(group)) || i < (matcher.end(group) - locations.get(1)); i++) {
+							for (int i = matcher.start(group) + locations.get(0); i < (matcher.end(group) - locations.get(1)); i++) {
 								message.setCharAt(i, '*');
 							}
 						}
