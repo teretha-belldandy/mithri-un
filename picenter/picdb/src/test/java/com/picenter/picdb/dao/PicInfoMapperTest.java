@@ -36,7 +36,6 @@ public class PicInfoMapperTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		
 	}
 
 	@AfterClass
@@ -63,9 +62,10 @@ public class PicInfoMapperTest {
 		Configuration config = factory.getConfiguration();
 		Environment env = config.getEnvironment();
 		System.out.println(env.getId());
-		
+
 		return factory;
 	}
+
 	@Test
 	public void testAddPicInfo() {
 		SqlSession session = sqlSessionFactory.openSession();
@@ -78,18 +78,6 @@ public class PicInfoMapperTest {
 		} finally {
 			session.close();
 		}
-	}
-
-	private PicInfo createPicInfo() {
-		PicInfo picinfo = new PicInfo();
-		Random rand = new Random();
-		picinfo.setPid(rand.nextInt(20000));
-		picinfo.setPname("may");
-		picinfo.setPdesc("ons");
-		picinfo.setPsize(9.99);
-		picinfo.setPpath("path way");
-		picid = picinfo.getPid();
-		return picinfo;
 	}
 
 	@Test
@@ -164,6 +152,18 @@ public class PicInfoMapperTest {
 		} finally {
 			session.close();
 		}
+	}
+
+	private PicInfo createPicInfo() {
+		PicInfo picinfo = new PicInfo();
+		Random rand = new Random();
+		picinfo.setPid(rand.nextInt(20000));
+		picinfo.setPname("may");
+		picinfo.setPdesc("ons");
+		picinfo.setPsize(9.99);
+		picinfo.setPpath("path way");
+		picid = picinfo.getPid();
+		return picinfo;
 	}
 
 }
