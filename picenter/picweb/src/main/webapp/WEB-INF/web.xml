@@ -24,6 +24,6 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>dispatch</servlet-name>
-		<url-pattern>*</url-pattern>
+		<url-pattern>*.json</url-pattern>
 	</servlet-mapping>
-</web-app>  
+</web-app>
