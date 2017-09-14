@@ -15,8 +15,9 @@ public class PatternMatcherDemo {
 
 	public static void main(String[] args) {
 		DesensitizePatternLayout layout = new DesensitizePatternLayout();
-		layout.setPatternsProperty("id|name-1-0,password-0-0,phone|mobilephone-3-4");
-		String message = "id:abcde,asdfasdfasd,password=123456789,asdfasdfasdfa,phone:15111111111,name=\"ΑυµΒ»ª\"";
+		layout.setPatternsProperty(
+				"id|name-1-0,password-0-0,phone|mobilePhone-3-4,certificateNumber-6-8");
+		String message = "\\\"phone\\\":\\\"abcdefghij\\\"";
 		System.out.println(layout.doLayout(message));
 	}
 
@@ -57,9 +58,9 @@ class DesensitizePatternLayout {
 				String[] patterns = StringUtils.split(patternCube, '-');
 				if (patterns.length >= 3) {
 					StringBuilder regxBuilder = new StringBuilder();
-					regxBuilder.append("\"?(");
+					regxBuilder.append("\\\\*\"?(");
 					regxBuilder.append(patterns[0]);
-					regxBuilder.append(")\"?\\s*(=|:)\\s*\\\"?([^(,|\\]|\\)|\\}|\")]*)\\\"?");
+					regxBuilder.append(")\\\\*\"?\\s*(=|:)\\s*\\\\*\"?([^(,|\\]|\\)|\\}|\")]*)\\\\*\"?");
 					List<Integer> locations = Lists.newArrayList();
 					locations.add(Integer.valueOf(patterns[1]));
 					locations.add(Integer.valueOf(patterns[2]));
