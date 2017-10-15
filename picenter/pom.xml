@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
@@ -17,7 +18,7 @@
 
 	<dependencyManagement>
 		<dependencies>
-			<!-- internal moudules -->
+			<!-- ========================= internal moudules ========================= -->
 			<dependency>
 				<groupId>net.uplearn</groupId>
 				<artifactId>picore</artifactId>
@@ -38,24 +39,74 @@
 				<artifactId>picutils</artifactId>
 				<version>${picenter-version}</version>
 			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+
+			<!-- ========================= spring ========================= -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${spring-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-beans</artifactId>
+				<version>${spring-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>${spring-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>${spring-version}</version>
+			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-web</artifactId>
 				<version>${spring-version}</version>
 			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-webmvc</artifactId>
 				<version>${spring-version}</version>
 			</dependency>
-			<!-- https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp -->
+
+			<!-- ========================= apache ========================= -->
 			<dependency>
 				<groupId>commons-dbcp</groupId>
 				<artifactId>commons-dbcp</artifactId>
 				<version>1.4</version>
 			</dependency>
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-core</artifactId>
+				<version>3.2.0</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+				<version>2.6</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>3.6</version>
+			</dependency>
+
+			<!-- ========================= google ========================= -->
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>23.0</version>
+			</dependency>
+
+			<!-- ========================= mysql & mybatis ========================= -->
 			<dependency>
 				<groupId>mysql</groupId>
 				<artifactId>mysql-connector-java</artifactId>
@@ -66,44 +117,69 @@
 				<artifactId>mybatis</artifactId>
 				<version>${mybatis-version}</version>
 			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
 			<dependency>
 				<groupId>org.mybatis</groupId>
 				<artifactId>mybatis-spring</artifactId>
 				<version>1.2.5</version>
 			</dependency>
+
+			<!-- ========================= json ========================= -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>1.2.39</version>
+			</dependency>
+
+			<!-- ========================= quarz ========================= -->
+			<dependency>
+				<groupId>org.quartz-scheduler</groupId>
+				<artifactId>quartz</artifactId>
+				<version>2.3.0</version>
+			</dependency>
+
+			<!-- ========================= orika ========================= -->
+			<dependency>
+				<groupId>ma.glasnost.orika</groupId>
+				<artifactId>orika-core</artifactId>
+				<version>1.5.2</version>
+			</dependency>
+
+			<!-- ========================= okhttp ========================= -->
+			<dependency>
+				<groupId>com.squareup.okhttp3</groupId>
+				<artifactId>okhttp</artifactId>
+				<version>3.9.0</version>
+			</dependency>
+			<dependency>
+				<groupId>com.squareup.okhttp</groupId>
+				<artifactId>okhttp</artifactId>
+				<version>2.7.5</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+		<!-- ========================= spring ========================= -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>${spring-version}</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
-			<version>${spring-version}</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>${spring-version}</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
-			<version>${spring-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
-			<version>${spring-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -118,5 +194,6 @@
 		<module>picweb</module>
 		<module>picdb</module>
 		<module>picutils</module>
+		<module>pictest</module>
 	</modules>
 </project>
