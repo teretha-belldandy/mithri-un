@@ -14,5 +14,5 @@
 		<appender-ref ref="STDOUT" />
 	</root>
 
-	<logger level="INFO"></logger>
+	<logger name="com.picenter" level="INFO" />
 </configuration>
