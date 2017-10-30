@@ -11,6 +11,7 @@
 	<properties>
 		<picenter-version>0.0.1-SNAPSHOT</picenter-version>
 		<spring-version>3.2.13.RELEASE</spring-version>
+		<logback-version>1.2.3</logback-version>
 		<mysql-con-version>5.1.25</mysql-con-version>
 		<mybatis-version>3.2.8</mybatis-version>
 		<junit-version>4.12</junit-version>
@@ -75,6 +76,30 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-webmvc</artifactId>
 				<version>${spring-version}</version>
+			</dependency>
+
+			<!-- ========================= logback ========================= -->
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-core</artifactId>
+				<version>${logback-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+				<version>${logback-version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-access</artifactId>
+				<version>${logback-version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.7.25</version>
 			</dependency>
 
 			<!-- ========================= apache ========================= -->
@@ -201,6 +226,17 @@
 			<version>${junit-version}</version>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- ========================= logback ========================= -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<modules>
