@@ -2,6 +2,7 @@ package org.picenter.pictest;
 
 public class StaticInheritDemo {
 
+	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		A one = new B();
 		B two = new B();
