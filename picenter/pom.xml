@@ -286,5 +286,7 @@
 		<module>picutils</module>
 		<module>pictest</module>
 		<module>picsearch</module>
+		<module>piconfig</module>
 	</modules>
+	
 </project>
