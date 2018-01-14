@@ -19,6 +19,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.junit.Assert;
@@ -26,7 +27,7 @@ import org.junit.Assert;
 import com.picenter.picdb.model.PicInfo;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath*:spring/application*.xml" })
+@ContextConfiguration(locations = { "classpath*:spring/application-test-*.xml" })
 public class PicInfoMapperTest {
 
 	@Autowired
@@ -67,6 +68,7 @@ public class PicInfoMapperTest {
 	}
 
 	@Test
+	@Rollback(true)
 	public void testAddPicInfo() {
 		SqlSession session = sqlSessionFactory.openSession();
 		try {
@@ -81,6 +83,7 @@ public class PicInfoMapperTest {
 	}
 
 	@Test
+	@Rollback(true)
 	public void testDelPicInfo() {
 		SqlSession session = sqlSessionFactory.openSession();
 		try {
@@ -96,12 +99,13 @@ public class PicInfoMapperTest {
 	}
 
 	@Test
+	@Rollback(true)
 	public void testUpdatePicInfo() {
 		SqlSession session = sqlSessionFactory.openSession();
 		try {
 			PicInfoMapper picinfoMapper = session.getMapper(PicInfoMapper.class);
 			PicInfo picinfo = new PicInfo();
-			picinfo.setPid(13177);
+			picinfo.setPid(12594);
 			picinfo.setPname("amanda");
 			picinfo.setPdesc("ons");
 			picinfo.setPsize(9.99);
@@ -115,17 +119,18 @@ public class PicInfoMapperTest {
 	}
 
 	@Test
+	@Rollback(true)
 	public void testQueryPicInfoById() {
 		SqlSession session = sqlSessionFactory.openSession();
 		try {
 			PicInfoMapper picinfoMapper = session.getMapper(PicInfoMapper.class);
 			long t = System.currentTimeMillis();
-			PicInfo res = picinfoMapper.queryPicInfoById(1);
+			PicInfo res = picinfoMapper.queryPicInfoById(12594);
 			System.out.println("time : " + (System.currentTimeMillis() - t));
 
 			PicInfoMapper picinfoMapper1 = session.getMapper(PicInfoMapper.class);
 			long t1 = System.currentTimeMillis();
-			PicInfo res1 = picinfoMapper1.queryPicInfoById(1);
+			PicInfo res1 = picinfoMapper1.queryPicInfoById(12594);
 			System.out.println("time : " + (System.currentTimeMillis() - t1));
 
 			Assert.assertTrue(null != res);
@@ -138,6 +143,7 @@ public class PicInfoMapperTest {
 	}
 
 	@Test
+	@Rollback(true)
 	public void testQueryAllPicInfo() {
 		SqlSession session = sqlSessionFactory.openSession();
 		try {

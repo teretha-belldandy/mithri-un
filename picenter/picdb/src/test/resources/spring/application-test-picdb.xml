@@ -27,10 +27,10 @@
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
-		<property name="driverClassName" value="${driver}" />
-		<property name="url" value="${url}" />
-		<property name="username" value="${username}" />
-		<property name="password" value="${password}" />
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/picenterdb" />
+		<property name="username" value="root" />
+		<property name="password" value="nxionge101" />
 	</bean>
 
 	<!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
@@ -38,7 +38,8 @@
 		<property name="dataSource" ref="dataSource" />
 		<!-- 自动扫描mapping.xml文件 -->
 		<property name="mapperLocations" value="classpath:sqlmapper/*.xml"></property>
-		<!-- <property name="configLocation" value="classpath:mybatis/mybatis-config.xml" /> -->
+		<!-- <property name="configLocation" value="classpath:mybatis/mybatis-config.xml" 
+			/> -->
 	</bean>
 
 </beans>
