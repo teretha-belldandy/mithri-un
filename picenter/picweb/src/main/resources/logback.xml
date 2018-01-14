@@ -17,4 +17,5 @@
 	</root>
 
 	<logger name="com.picenter" level="INFO" />
+
 </configuration>
