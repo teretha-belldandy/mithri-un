@@ -1,4 +1,4 @@
-package org.picenter.pictest;
+package org.picenter.pictest.file;
 
 import java.io.File;
 import java.util.Queue;
