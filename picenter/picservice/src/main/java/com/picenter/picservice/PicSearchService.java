@@ -1,6 +1,6 @@
-package com.picenter.picsearch;
+package com.picenter.picservice;
 
-import com.picenter.picsearch.model.PicInfo;
+import com.picenter.picservice.model.PicInfo;
 
 public interface PicSearchService {
 

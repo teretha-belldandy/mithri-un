@@ -1,6 +1,6 @@
-package com.picenter.picsearch.model;
+package com.picenter.picservice.model;
 
-import com.picenter.picsearch.common.PicSearchBaseModel;
+import com.picenter.picservice.common.PicSearchBaseModel;
 
 public class PicInfo extends PicSearchBaseModel {
 

@@ -1,4 +1,4 @@
-package com.picenter.picsearch.common;
+package com.picenter.picservice.common;
 
 import java.io.Serializable;
 

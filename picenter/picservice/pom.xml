@@ -6,7 +6,7 @@
 		<artifactId>picenter</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>picsearch</artifactId>
+	<artifactId>picservice</artifactId>
 
 	<dependencies>
 		<dependency>

@@ -1,7 +1,7 @@
-package com.picenter.picsearch.impl;
+package com.picenter.picservice.impl;
 
-import com.picenter.picsearch.PicSearchService;
-import com.picenter.picsearch.model.PicInfo;
+import com.picenter.picservice.PicSearchService;
+import com.picenter.picservice.model.PicInfo;
 
 public class PicSearchServiceCrawlerImpl implements PicSearchService {
 

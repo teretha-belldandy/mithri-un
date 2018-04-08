@@ -1,4 +1,4 @@
-package com.picenter.picsearch.crawler4j;
+package com.picenter.picservice.crawler4j;
 
 import edu.uci.ics.crawler4j.crawler.WebCrawler;
 
