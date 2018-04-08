@@ -14,12 +14,25 @@
 		<logback-version>1.2.3</logback-version>
 		<mysql-con-version>5.1.25</mysql-con-version>
 		<mybatis-version>3.2.8</mybatis-version>
+		<mybatis-spring.version>1.2.5</mybatis-spring.version>
 		<junit-version>4.12</junit-version>
 		<dom4j.version>1.6.1</dom4j.version>
 		<slf4j.version>1.7.25</slf4j.version>
 		<jcraft.version>0.1.54</jcraft.version>
 		<jsoup.version>1.10.3</jsoup.version>
+		<commons-dbcp.version>1.4</commons-dbcp.version>
+		<cxf.version>3.2.0</cxf.version>
+		<commons-lang.version>2.6</commons-lang.version>
+		<commons-lang3.version>3.6</commons-lang3.version>
 		<crawler4j.version>4.3</crawler4j.version>
+		<curator.version>4.0.0</curator.version>
+		<dubbo.version>2.5.3</dubbo.version>
+		<fastjson.version>1.2.39</fastjson.version>
+		<guava.version>23.0</guava.version>
+		<quartz.version>2.3.0</quartz.version>
+		<orika.version>1.5.2</orika.version>
+		<okhttp.version>2.7.5</okhttp.version>
+		<okhttp3.version>3.9.0</okhttp3.version>
 	</properties>
 
 	<dependencyManagement>
@@ -111,44 +124,51 @@
 			<dependency>
 				<groupId>commons-dbcp</groupId>
 				<artifactId>commons-dbcp</artifactId>
-				<version>1.4</version>
+				<version>${commons-dbcp.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-core</artifactId>
-				<version>3.2.0</version>
+				<version>${cxf.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>commons-lang</groupId>
 				<artifactId>commons-lang</artifactId>
-				<version>2.6</version>
+				<version>${commons-lang.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
-				<version>3.6</version>
+				<version>${commons-lang3.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.curator</groupId>
 				<artifactId>curator-framework</artifactId>
-				<version>4.0.0</version>
+				<version>${curator.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.curator</groupId>
 				<artifactId>curator-client</artifactId>
-				<version>4.0.0</version>
+				<version>${curator.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.curator</groupId>
 				<artifactId>curator-recipes</artifactId>
-				<version>4.0.0</version>
+				<version>${curator.version}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/com.alibaba/dubbo -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>dubbo</artifactId>
+				<version>${dubbo.version}</version>
 			</dependency>
 
 			<!-- ========================= google ========================= -->
 			<dependency>
 				<groupId>com.google.guava</groupId>
 				<artifactId>guava</artifactId>
-				<version>23.0</version>
+				<version>${guava.version}</version>
 			</dependency>
 
 			<!-- ========================= mysql & mybatis ========================= -->
@@ -165,40 +185,40 @@
 			<dependency>
 				<groupId>org.mybatis</groupId>
 				<artifactId>mybatis-spring</artifactId>
-				<version>1.2.5</version>
+				<version>${mybatis-spring.version}</version>
 			</dependency>
 
 			<!-- ========================= json ========================= -->
 			<dependency>
 				<groupId>com.alibaba</groupId>
 				<artifactId>fastjson</artifactId>
-				<version>1.2.39</version>
+				<version>${fastjson.version}</version>
 			</dependency>
 
 			<!-- ========================= quarz ========================= -->
 			<dependency>
 				<groupId>org.quartz-scheduler</groupId>
 				<artifactId>quartz</artifactId>
-				<version>2.3.0</version>
+				<version>${quartz.version}</version>
 			</dependency>
 
 			<!-- ========================= orika ========================= -->
 			<dependency>
 				<groupId>ma.glasnost.orika</groupId>
 				<artifactId>orika-core</artifactId>
-				<version>1.5.2</version>
+				<version>${orika.version}</version>
 			</dependency>
 
 			<!-- ========================= okhttp ========================= -->
 			<dependency>
 				<groupId>com.squareup.okhttp3</groupId>
 				<artifactId>okhttp</artifactId>
-				<version>3.9.0</version>
+				<version>${okhttp3.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.squareup.okhttp</groupId>
 				<artifactId>okhttp</artifactId>
-				<version>2.7.5</version>
+				<version>${okhttp.version}</version>
 			</dependency>
 
 			<!-- ========================= crawler4j ========================= -->
@@ -274,12 +294,13 @@
 
 	<modules>
 		<module>picore</module>
-		<module>picweb</module>
-		<module>picdb</module>
-		<module>picutils</module>
-		<module>pictest</module>
 		<module>picservice</module>
+		<module>picutils</module>
+		<module>picdb</module>
+		<module>picweb</module>
 		<module>piconfig</module>
+		<module>picfacade</module>
+		<module>pictest</module>
 	</modules>
 
 </project>
