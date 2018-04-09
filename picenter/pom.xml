@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>net.uplearn</groupId>
 		<artifactId>basicenter</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.1</version>
 	</parent>
 
 	<groupId>net.uplearn</groupId>
