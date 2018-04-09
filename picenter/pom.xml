@@ -14,6 +14,55 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
+	<properties>
+		<picenter.version>0.0.1-SNAPSHOT</picenter.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>net.uplearn</groupId>
+				<artifactId>picdb</artifactId>
+				<version>${picenter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.uplearn</groupId>
+				<artifactId>picservice</artifactId>
+				<version>${picenter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.uplearn</groupId>
+				<artifactId>pic</artifactId>
+				<version>${picenter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.uplearn</groupId>
+				<artifactId>picutils</artifactId>
+				<version>${picenter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.uplearn</groupId>
+				<artifactId>piconfig</artifactId>
+				<version>${picenter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.uplearn</groupId>
+				<artifactId>picweb</artifactId>
+				<version>${picenter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.uplearn</groupId>
+				<artifactId>picfacade</artifactId>
+				<version>${picenter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.uplearn</groupId>
+				<artifactId>pictest</artifactId>
+				<version>${picenter.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<dependencies>
 		<!-- ========================= spring ========================= -->
 		<dependency>
