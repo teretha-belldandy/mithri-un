@@ -55,12 +55,11 @@
 	</dependencies>
 
 	<modules>
-		<module>picore</module>
+		<module>picdb</module>
 		<module>picservice</module>
 		<module>picutils</module>
-		<module>picdb</module>
-		<module>picweb</module>
 		<module>piconfig</module>
+		<module>picweb</module>
 		<module>picfacade</module>
 		<module>pictest</module>
 	</modules>
