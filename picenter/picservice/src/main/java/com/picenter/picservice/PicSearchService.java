@@ -1,11 +1,13 @@
 package com.picenter.picservice;
 
+import java.util.List;
+
 import com.picenter.picservice.model.PicInfo;
 
 public interface PicSearchService {
 
-	PicInfo searchPicByUrl(String urlPath);
+	List<PicInfo> searchPicByUrl(String urlPath);
 
-	PicInfo searchPicByKey(String key);
+	List<PicInfo> searchPicByKey(String key);
 
 }
