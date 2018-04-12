@@ -14,7 +14,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>net.uplearn</groupId>
-			<artifactId>picore</artifactId>
+			<artifactId>picservice</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>net.uplearn</groupId>

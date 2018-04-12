@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://code.alibabatech.com/schema/dubbo 
+	http://code.alibabatech.com/schema/dubbo/dubbo.xsd"
+	default-lazy-init="false">
+
+	<dubbo:application name="picenter-app" />
+	<dubbo:registry address="zookeeper://127.0.0.1:2191" />
+	<dubbo:protocol name="dubbo" port="20101" />
+	<dubbo:provider loadbalance="roundrobin" />
+
+	<bean id="picSearchFacade" class="com.picenter.picservice.facadeimpl.PicSearchFacadeImpl" />
+	<dubbo:service interface="net.picenter.picfacade.PicSearchFacade"
+		ref="picSearchFacade" timeout="3000" />
+
+</beans>
