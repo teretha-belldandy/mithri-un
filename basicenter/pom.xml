@@ -163,6 +163,20 @@
 				<groupId>com.alibaba</groupId>
 				<artifactId>dubbo</artifactId>
 				<version>${dubbo.version}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>log4j</artifactId>
+						<groupId>log4j</groupId>
+					</exclusion>
+					<exclusion>
+						<artifactId>httpclient</artifactId>
+						<groupId>org.apache.httpcomponents</groupId>
+					</exclusion>
+					<exclusion>
+						<artifactId>httpcore</artifactId>
+						<groupId>org.apache.httpcomponents</groupId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 
 			<!-- ========================= google ========================= -->
@@ -256,12 +270,9 @@
 				<scope>test</scope>
 			</dependency>
 
-			<!-- https://mvnrepository.com/artifact/com.101tec/zkclient 
-			<dependency>
-				<groupId>com.101tec</groupId>
-				<artifactId>zkclient</artifactId>
-				<version>${zkclient_101tec.version}</version>
-			</dependency>-->
+			<!-- https://mvnrepository.com/artifact/com.101tec/zkclient <dependency> 
+				<groupId>com.101tec</groupId> <artifactId>zkclient</artifactId> <version>${zkclient_101tec.version}</version> 
+				</dependency> -->
 
 		</dependencies>
 	</dependencyManagement>
