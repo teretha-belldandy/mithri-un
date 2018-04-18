@@ -14,6 +14,11 @@
 			<artifactId>picfacade</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>com.101tec</groupId>
+			<artifactId>zkclient</artifactId>
+			<version>${zkclient_101tec.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>dubbo</artifactId>
 			<exclusions>
