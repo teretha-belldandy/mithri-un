@@ -17,8 +17,50 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<aicenter.version>0.0.1-SNAPSHOT</aicenter.version>
+		<picenter.version>0.0.1-SNAPSHOT</picenter.version>
 	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>net.uplearn</groupId>
+				<artifactId>aidb</artifactId>
+				<version>${aicenter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.uplearn</groupId>
+				<artifactId>aiservice</artifactId>
+				<version>${aicenter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.uplearn</groupId>
+				<artifactId>aiutils</artifactId>
+				<version>${aicenter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.uplearn</groupId>
+				<artifactId>aiconfig</artifactId>
+				<version>${aicenter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.uplearn</groupId>
+				<artifactId>aiweb</artifactId>
+				<version>${aicenter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.uplearn</groupId>
+				<artifactId>aifacade</artifactId>
+				<version>${aicenter.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>net.uplearn</groupId>
+				<artifactId>picfacade</artifactId>
+				<version>${picenter.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<dependencies>
 		<!-- ========================= spring ========================= -->

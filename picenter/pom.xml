@@ -32,11 +32,6 @@
 			</dependency>
 			<dependency>
 				<groupId>net.uplearn</groupId>
-				<artifactId>pic</artifactId>
-				<version>${picenter.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>net.uplearn</groupId>
 				<artifactId>picutils</artifactId>
 				<version>${picenter.version}</version>
 			</dependency>

@@ -12,6 +12,9 @@
 	<dubbo:protocol name="dubbo" port="20001" />
 	<dubbo:provider loadbalance="random" />
 
+	<!-- provider -->
+
+	<!-- consumer -->
 	<dubbo:reference id="picSearchFacade"
 		class="net.picenter.picfacade.PicSearchFacade" />
 

@@ -12,7 +12,7 @@ public class PicAnalysisImpl implements PicAnalysis {
 	@Autowired
 	private PicSearchFacade picSearchFacade;
 
-	public String analysisPic(String picId) {
+	public String analysePic(String picId) {
 		String res = picSearchFacade.searchPicForKey(picId).get(0);
 		System.out.println(res);
 		// TODO Auto-generated method stub

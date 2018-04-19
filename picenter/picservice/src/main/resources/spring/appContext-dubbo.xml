@@ -13,8 +13,11 @@
 	<dubbo:protocol name="dubbo" port="20101" />
 	<dubbo:provider loadbalance="roundrobin" />
 
+	<!-- provider -->
 	<bean id="picSearchFacade" class="com.picenter.picservice.facadeimpl.PicSearchFacadeImpl" />
 	<dubbo:service interface="net.picenter.picfacade.PicSearchFacade"
 		ref="picSearchFacade" timeout="3000" />
+
+	<!-- consumer -->
 
 </beans>

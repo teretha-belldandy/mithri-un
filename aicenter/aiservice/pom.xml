@@ -10,9 +10,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<groupId>net.uplearn</groupId>
 	<artifactId>aiservice</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>aiservice</name>
 	<url>http://maven.apache.org</url>
 
@@ -23,8 +21,11 @@
 	<dependencies>
 		<dependency>
 			<groupId>net.uplearn</groupId>
+			<artifactId>aifacade</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.uplearn</groupId>
 			<artifactId>picfacade</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

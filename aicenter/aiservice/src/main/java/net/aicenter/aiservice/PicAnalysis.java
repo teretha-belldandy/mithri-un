@@ -2,6 +2,6 @@ package net.aicenter.aiservice;
 
 public interface PicAnalysis {
 
-	public String analysisPic(String picId);
+	public String analysePic(String picId);
 
 }
